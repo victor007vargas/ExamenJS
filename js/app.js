@@ -22,14 +22,20 @@ function flastit ()   {clrtitwh (),clrtitbl ()};
 
 
 // □□□□□□  2 Modulo Generación de numero aleatorio de 1 a 4 □□□□□□
-function genum () {numx=Math.floor((Math.random() * 4) + 1)}
 function genuma (){a1=Math.floor((Math.random() * 4) + 1),a2=Math.floor((Math.random() * 4) + 1),a3=Math.floor((Math.random() * 4) + 1),a4=Math.floor((Math.random() * 4) + 1),a5=Math.floor((Math.random() * 4) + 1),a6=Math.floor((Math.random() * 4) + 1),a7=Math.floor((Math.random() * 4) + 1)}
-function asigna (){if (a1==4) {alert("El dulce es el cuatro");alert("Puede seguir");asia();}}
-function asia (){$("#a1").attr("src","image/4.png")}
+
+function asigna(){
+var cola = ["a1","a2","a3","a4","a5","a6","a7"] ;
+var i ;
+var numa ="";
+for (i=0; i < cola.length ;i++)
+{ numa += (cola[i]=Math.floor((Math.random() * 4) + 1))};
+alert(numa);
+}
 // □□□□□□  Fin M2 □□□□□□
 
 // □□□□□□  3 Modulo Actividad del boton Inicar □□□□□□
-$(".btn-reinicio").click(function(){ $(".btn-reinicio").css(genuma(),alert(a1),asigna())})
+$(".btn-reinicio").click(function(){ $(".btn-reinicio").css(genuma(),asigna())})
 
 
 
