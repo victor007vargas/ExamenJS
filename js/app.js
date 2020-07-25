@@ -26,10 +26,23 @@ function flastit ()   {clrtitwh (),clrtitbl ()};
 
 function asigna(){
 var i ;
-var numa = "";
+var g3 ;
+var numa = ""; numb = ""; numc = "";numd = "";nume = "";numf= ""; numg = "";
 var cola = [a1,a2,a3,a4,a5,a6,a7] ;
+var colb = [b1,b2,b3,b4,b5,b6,b7] ;
+var colc = [c1,c2,c3,c4,c5,c6,c7] ;
+var cold = [d1,d2,d3,d4,d5,d6,d7] ;
+var cole = [e1,e2,e3,e4,e5,e6,e7] ;
+var colf = [f1,f2,f3,f4,f5,f6,f7] ;
+var colg = [g1,g2,g3,g4,g5,g6,g7] ;
 for (i=0; i < cola.length ;i++)
 { numa += (cola[i]=Math.floor((Math.random() * 4) + 1))};
+{ numb += (cola[i]=Math.floor((Math.random() * 4) + 1))};
+{ numc += (cola[i]=Math.floor((Math.random() * 4) + 1))};
+{ numd += (cola[i]=Math.floor((Math.random() * 4) + 1))};
+{ nume += (cola[i]=Math.floor((Math.random() * 4) + 1))};
+{ numf += (cola[i]=Math.floor((Math.random() * 4) + 1))};
+{ numg += (cola[i]=Math.floor((Math.random() * 4) + 1))};
 var a1=cola.slice(0,1)
 if (a1==1){$("#a1").attr("src","image/1.png");}
 if (a1==2){$("#a1").attr("src","image/2.png");}
