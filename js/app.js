@@ -1,7 +1,7 @@
 $(function(){
 
 setTimeout (flastit,2000);
-
+$(".elemento").draggable({cursor:"grab", distance:15, grid:[130,95],drag :function(){}});
 
 });
 
@@ -96,11 +96,7 @@ $(".btn-reinicio").click(function(){ $(".btn-reinicio").css(deteceries(),asigna(
 
 // □□□□□□  4 Modulo Logica deteccion Series □□□□□□
 function deteceries(){
-
-  if ((a1==1)&&(a2==1){if(a3==1){ptsa3ele=1;if(a4==1){ptsa4ele=1;if(a5==1){ptsa5ele=1;if (a6==1){ptsa6lin=1;if(a7==1){ptsa7=1}}}}} }
-  if ((a2==1)&&(a3==1)){if(a4==1){ptsa3ele=1;}}
-  if ((a4==1)&&(a5==1)&&(a6==1)){}
-  if ((a5==1)&&(a6==1)&&(a7==1)){}
+  if ((a1==1)&&(a2==1)){if(a3==1){ptsa3ele=1;}}
 
 }
 // □□□□□□  Fin M4 □□□□□□
