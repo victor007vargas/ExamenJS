@@ -2,7 +2,10 @@ $(function(){
 
 setTimeout (flastit,2000);
 $(".elemento").draggable({cursor:"grab", distance:15, grid:[130,95],drag :function(){}});
-
+document.getElementById("a1").onclick=panelact
+function panelact() {
+  alert("Se detecto un clik")
+}
 });
 
 // □□□□□□  Declaración de Variables Globales □□□□□□
