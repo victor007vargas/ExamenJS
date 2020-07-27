@@ -1,7 +1,7 @@
 $(function(){
 
 setTimeout (flastit,2000);
-$(".elemento").draggable({cursor:"grab", containment:".panel-tablero",drag :function(){}});
+$(".elemento").draggable({cursor:"grab", containment:".panel-tablero");
 
 
 });
