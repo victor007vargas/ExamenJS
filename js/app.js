@@ -1,11 +1,9 @@
 $(function(){
 
 setTimeout (flastit,2000);
-$(".elemento").draggable({cursor:"grab", distance:15, grid:[130,95],drag :function(){}});
-document.getElementById("a1").onclick=panelact
-function panelact() {
-  alert("Se detecto un clik")
-}
+$(".elemento").draggable({cursor:"grab", containment:".panel-tablero",drag :function(){}});
+
+
 });
 
 // □□□□□□  Declaración de Variables Globales □□□□□□
@@ -28,6 +26,7 @@ function flastit ()   {clrtitwh (),clrtitbl ()};
 
 // □□□□□□  2 Modulo Generación de numero aleatorio de 1 a 4 y asignación a cajones □□□□□□
 function asigna(){
+
 var i ;
 for (i=0; i < cola.length ;i++)
 { numa = (cola[i]=Math.floor((Math.random() * 4) + 1))};
