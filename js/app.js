@@ -1,13 +1,15 @@
 $(function(){
 
 setTimeout (flastit,2000);
-$(".elemento").draggable({cursor:"grab", containment:".panel-tablero");
-
-
+$(".elemento").draggable({cursor:"grab", containment:".panel-tablero",distance:5,
+drag:function(event,ui){elearra=$(this).attr("id")}});
+$(".elemento").droppable({drop: function( event, ui ) {elecae=$(this).attr("id");reasigel()} })
+function reasigel(){ alert("Elemento arrrastrado :"+elearra+"\nElemento recepetor :"+elecae)}
 });
 
 // □□□□□□  Declaración de Variables Globales □□□□□□
 var g3 ;
+var elearra; var elecae;
 var numa = [];numb = []; numc = [];numd =[];nume =[];numf=[]; numg = [];
 var cola = [a1,a2,a3,a4,a5,a6,a7] ;
 var colb = [b1,b2,b3,b4,b5,b6,b7] ;
@@ -98,7 +100,7 @@ $(".btn-reinicio").click(function(){ $(".btn-reinicio").css(deteceries(),asigna(
 
 // □□□□□□  4 Modulo Logica deteccion Series □□□□□□
 function deteceries(){
-  if ((a1==1)&&(a2==1)){if(a3==1){ptsa3ele=1;}}
+
 
 }
 // □□□□□□  Fin M4 □□□□□□
