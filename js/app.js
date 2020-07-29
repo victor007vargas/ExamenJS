@@ -1,10 +1,19 @@
 $(function(){
 
 setTimeout (flastit,2000);
+
 $(".elemento").draggable({cursor:"grab", containment:".panel-tablero",distance:5,
 drag:function(event,ui){elearra=$(this).attr("id")}});
+
 $(".elemento").droppable({drop: function( event, ui ) {elecae=$(this).attr("id");reasigel()} })
+
+
 function reasigel(){ alert("Elemento arrrastrado :"+elearra+"\nElemento recepetor :"+elecae)}
+
+
+
+
+
 });
 
 // □□□□□□  Declaración de Variables Globales □□□□□□
