@@ -104,3 +104,48 @@ div[class^='col']{
   height: 96px;
 
 }
+
+footer {
+display: flex;
+flex-direction:  row;
+margin-left: 1550px;
+}
+
+.reglas{
+
+ display: flex;
+ background-size: cover;
+ background-image: url('../image/trofeo.png');
+ width: 80px;
+ height: 100px;
+ margin-top: 25px;
+ border: 10px solid #FFB206;
+ border-radius: 5px;
+}
+
+.bt1{
+ font-size: 20px;
+ color: white;
+ display: flex;
+ background-color: green;
+ width: 80px;
+ height: 100px;
+ margin-top: 25px;
+ border: 10px solid #FFB206;
+ border-radius: 5px;
+}
+.bt2{
+ color: white;
+
+  font-size: 20px;
+ margin: 25px;
+ display: flex;
+ background-color: blue;
+ width: 80px;
+ height: 100px;
+ margin-top: 25px;
+ border: 10px solid #FFB206;
+ border-radius: 5px;
+}
+ .bt1:hover{ background-color: gray;}
+ .bt2:hover{ background-color: gray;}
