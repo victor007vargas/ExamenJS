@@ -3,22 +3,50 @@ $(function(){
 setTimeout (flastit,2000);
 
 $(".elemento").draggable({cursor:"grab", containment:".panel-tablero",distance:5,
-drag:function(event,ui){elearra=$(this).attr("id")}});
-
-$(".elemento").droppable({drop: function( event, ui ) {elecae=$(this).attr("id");reasigel()} })
-
-
-function reasigel(){ alert("Elemento arrrastrado :"+elearra+"\nElemento recepetor :"+elecae)}
+drag:function(event,ui){elearra=$(this).attr("id");}});
 
 
 
+
+$(".elemento").droppable({drop: function( event, ui )
+{dulce =(this);
+elecae=$(this).attr("id");reasigel()} })
+
+
+function reasigel(){ alert("Elemento arrrastrado :"+elearra+"\nElemento recepetor :"+elecae);
+
+}
+
+
+function cambioimg(){}
 
 
 });
 
+
+
+$(".bt1").click(function(){
+$(dulce).attr("src","image/trofeo.png");
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // □□□□□□  Declaración de Variables Globales □□□□□□
 var g3 ;
-var elearra; var elecae;
+var elearra; var elecae; var dulce;
 var numa = [];numb = []; numc = [];numd =[];nume =[];numf=[]; numg = [];
 var cola = [a1,a2,a3,a4,a5,a6,a7] ;
 var colb = [b1,b2,b3,b4,b5,b6,b7] ;
