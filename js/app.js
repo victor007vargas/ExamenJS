@@ -1,52 +1,26 @@
-$(function(){
+$(function(){ // □□□□□□ 1 Inicio Funcion de Inicialaizacion  □□□□□□
 
-setTimeout (flastit,2000);
-
-$(".elemento").draggable({cursor:"grab", containment:".panel-tablero",distance:5,
-drag:function(event,ui){elearra=$(this).attr("id");}});
+setTimeout (flastit,2000); //***** 1.1 retardo accion color titulo (ver item 3)
 
 
+}); // □□□□□□ Fin Funcion de Inicialaizacion  □□□□□□
+
+$(".elemento").draggable({cursor:"grab", containment:".panel-tablero",distance:5, // ****1.2 Habilita drag a elementos
+drag:function(event,ui){imgarra=$(this).attr("src");}});//****fin 1.2
 
 
-$(".elemento").droppable({drop: function( event, ui )
-{dulce =(this);
-elecae=$(this).attr("id");reasigel()} })
+$(".elemento").droppable({drop: function( event, ui )// ****1.3 Habilita drop a elementos
+{recipe =(this);elecae=$(this).attr("id");reasigel();} })
 
-
-function reasigel(){ alert("Elemento arrrastrado :"+elearra+"\nElemento recepetor :"+elecae);
-
-}
-
-
-function cambioimg(){}
-
-
-});
-
-
+function reasigel(){$(recipe).attr("src",imgarra);}
 
 $(".bt1").click(function(){
-$(dulce).attr("src","image/trofeo.png");
+
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// □□□□□□  Declaración de Variables Globales □□□□□□
+// □□□□□□  2  Declaración de Variables Globales □□□□□□
 var g3 ;
-var elearra; var elecae; var dulce;
+var imgarra; var elecae; var recipe;
 var numa = [];numb = []; numc = [];numd =[];nume =[];numf=[]; numg = [];
 var cola = [a1,a2,a3,a4,a5,a6,a7] ;
 var colb = [b1,b2,b3,b4,b5,b6,b7] ;
@@ -57,13 +31,13 @@ var colf = [f1,f2,f3,f4,f5,f6,f7] ;
 var colg = [g1,g2,g3,g4,g5,g6,g7] ;
 
 
-// □□□□□□  1 Modulo cambio color titulo□□□□□□
+// □□□□□□  3 Modulo cambio color titulo□□□□□□
 function clrtitwh ()  {$(".main-titulo").animate({color:"blue"},320,function(){clrtitbl ()})}
 function clrtitbl ()  {$(".main-titulo").animate({color:"yellow"},480,function(){clrtitwh ()})}
 function flastit ()   {clrtitwh (),clrtitbl ()};
-// □□□□□□  Fin M1 □□□□□□
+// □□□□□□  Fin 3 □□□□□□
 
-// □□□□□□  2 Modulo Generación de numero aleatorio de 1 a 4 y asignación a cajones □□□□□□
+// □□□□□□  4 Modulo Generación de numero aleatorio de 1 a 4 y asignación a cajones □□□□□□
 function asigna(){
 
 var i ;
@@ -128,12 +102,12 @@ if (a7==4){$("#a7").attr("src","image/4.png");} if (b7==4){$("#b7").attr("src","
 
 
 }
-// □□□□□□  Fin M2 □□□□□□
+// □□□□□□  Fin 4 □□□□□□
 
 
-// □□□□□□  3 Modulo Actividad del boton Inicar □□□□□□
-$(".btn-reinicio").click(function(){ $(".btn-reinicio").css(deteceries(),asigna())})
-// □□□□□□  Fin M3 □□□□□□
+// □□□□□□  5 Modulo Actividad del boton Inicar □□□□□□
+$(".btn-reinicio").click(function(){ $(".btn-reinicio").css(asigna())})
+// □□□□□□  Fin 5 □□□□□□
 
 // □□□□□□  4 Modulo Logica deteccion Series □□□□□□
 function deteceries(){
