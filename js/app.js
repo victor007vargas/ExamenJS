@@ -1,26 +1,53 @@
 $(function(){ // □□□□□□ 1 Inicio Funcion de Inicialaizacion  □□□□□□
 
 setTimeout (flastit,2000); //***** 1.1 retardo accion color titulo (ver item 3)
-
+asigpos();
 
 }); // □□□□□□ Fin Funcion de Inicialaizacion  □□□□□□
 
-$(".elemento").draggable({cursor:"grab", containment:".panel-tablero",distance:5, // ****1.2 Habilita drag a elementos
-drag:function(event,ui){imgarra=$(this).attr("src");}});//****fin 1.2
+$(".elemento").draggable({ // ****1.2 Habilita drag a elementos
+cursor:"grab",
+containment:".panel-tablero",
+distance:5,
+drag:function(event,ui){reogi=$(this);imgarra=$(this).attr("src");idarra=$(this).attr("id");posx=$(this).css("top");posy=$(this).css("left");
+
+
+
+},
+
+});//****fin 1.2
 
 
 $(".elemento").droppable({drop: function( event, ui )// ****1.3 Habilita drop a elementos
 {recipe =(this);elecae=$(this).attr("id");reasigel();} })
 
-function reasigel(){$(recipe).attr("src",imgarra);}
+function reasigel(){$(recipe).attr("src",imgarra); //**** asignacion de imagenes a ID origen destino
+$(elecae).attr("src",imgarra);
+flagdrop=1; monitordrop();
+
+}//****fin reasigel
+
+
+function monitordrop(){if ((idarra)=="a1"){llenado();}};
+
+function llenado(){
+
+$("#a1").css("top","-30px");
+$("#a1").css("left","0px");
+$("#a1").animate({top:"0px"},500);
+
+};
+
 
 $(".bt1").click(function(){
+
 
 })
 
 // □□□□□□  2  Declaración de Variables Globales □□□□□□
 var g3 ;
-var imgarra; var elecae; var recipe;
+var imgarra; var elecae; var recipe; var reogi; var flagdrop=0; var idarra; var posx ; var posy;
+
 var numa = [];numb = []; numc = [];numd =[];nume =[];numf=[]; numg = [];
 var cola = [a1,a2,a3,a4,a5,a6,a7] ;
 var colb = [b1,b2,b3,b4,b5,b6,b7] ;
@@ -115,3 +142,6 @@ function deteceries(){
 
 }
 // □□□□□□  Fin M4 □□□□□□
+// □□□□□□  Posicion elementos □□□□□□
+var posxa1,posya1,posxa2,posya2,posxa3, posya3,posxa4, posya4,posxa6, posya6,posx7,posy7
+function asigpos(){posxa1=$("#a1").css("top");posya1=$("#a1").css("left");posxa2=$("#a1").css("top");posya2=$("#a1").css("left")}
