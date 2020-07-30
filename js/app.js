@@ -35,7 +35,9 @@ function llenado(){
 $("#a1").css("top","-30px");
 $("#a1").css("left","0px");
 $("#a1").animate({top:"0px"},500);
+numx=Math.floor((Math.random() * 4) + 1);
 
+$("#a1").attr("src","image/1.png");
 };
 
 
@@ -46,7 +48,7 @@ $(".bt1").click(function(){
 
 // □□□□□□  2  Declaración de Variables Globales □□□□□□
 var g3 ;
-var imgarra; var elecae; var recipe; var reogi; var flagdrop=0; var idarra; var posx ; var posy;
+var imgarra; var elecae; var recipe; var reogi; var flagdrop=0; var idarra;
 
 var numa = [];numb = []; numc = [];numd =[];nume =[];numf=[]; numg = [];
 var cola = [a1,a2,a3,a4,a5,a6,a7] ;
@@ -142,6 +144,3 @@ function deteceries(){
 
 }
 // □□□□□□  Fin M4 □□□□□□
-// □□□□□□  Posicion elementos □□□□□□
-var posxa1,posya1,posxa2,posya2,posxa3, posya3,posxa4, posya4,posxa6, posya6,posx7,posy7
-function asigpos(){posxa1=$("#a1").css("top");posya1=$("#a1").css("left");posxa2=$("#a1").css("top");posya2=$("#a1").css("left")}
