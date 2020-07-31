@@ -9,7 +9,7 @@ $(".elemento").draggable({ // ****1.2 Habilita drag a elementos
 cursor:"grab",
 containment:".panel-tablero",
 distance:5,
-drag:function(event,ui){reogi=$(this);imgarra=$(this).attr("src");idarra=$(this).attr("id");posx=$(this).css("top");posy=$(this).css("left");
+drag:function(event,ui){reogi=$(this);imgarra=$(this).attr("src");idarra=$(this).attr("id");
 
 
 
@@ -32,18 +32,25 @@ function monitordrop(){if ((idarra)=="a1"){llenado();}};
 
 function llenado(){
 
-$("#a1").css("top","-30px");
+$("#a1").css("top","-40px");
 $("#a1").css("left","0px");
 $("#a1").animate({top:"0px"},500);
 numx=Math.floor((Math.random() * 4) + 1);
-
-$("#a1").attr("src","image/1.png");
+var imgete="image/1.png"
+imgx=[imgete.slice(0,6),numx,imgete.slice(7,11)] .join("")
+$("#a1").attr("src",imgx);
 };
 
 
 $(".bt1").click(function(){
-
-
+  $("#a1").css("top","-30px");
+  $("#a1").css("left","0px");
+  $("#a1").animate({top:"0px"},500);
+  numx=Math.floor((Math.random() * 4) + 1);
+  var imgete="image/1.png"
+  imgx=[imgete.slice(0,6),numx,imgete.slice(7,11)] .join("")
+  $("#a1").attr("src",imgx);
+alert(imgx);
 })
 
 // □□□□□□  2  Declaración de Variables Globales □□□□□□
