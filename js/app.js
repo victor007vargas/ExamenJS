@@ -26,7 +26,56 @@ flagdrop=1; monitordrop();
 
 }//****fin reasigel
 
+// □□□□□□  5 Modulo Actividad del boton Inicar □□□□□□
+$(".btn-reinicio").click(function(){ $(".btn-reinicio").css(asigna())})
+// □□□□□□  Fin 5 □□□□□□
 
+
+$(".bt1").click(function(){
+});
+// □□□□□□  4 Modulo Logica deteccion Series + Cambio dulces + Puntos  □□□□□□
+function deteceries(){
+// **** Deteciion de Imagenes
+ica1=$("#a1").attr("src");icb1=$("#b1").attr("src");icc1=$("#c1").attr("src");icd1=$("#d1").attr("src");ice1=$("#e1").attr("src");icf1=$("#f1").attr("src");icg1=$("#g1").attr("src");
+ica3=$("#a3").attr("src");icb3=$("#b3").attr("src");icc3=$("#c3").attr("src");icd2=$("#d2").attr("src");ice2=$("#e2").attr("src");icf2=$("#f2").attr("src");icg2=$("#g2").attr("src");
+ica2=$("#a2").attr("src");icb2=$("#b2").attr("src");icc2=$("#c2").attr("src");icd3=$("#d3").attr("src");ice3=$("#e3").attr("src");icf3=$("#f3").attr("src");icg3=$("#g3").attr("src");
+ica4=$("#a4").attr("src");icb4=$("#b4").attr("src");icc4=$("#c4").attr("src");icd4=$("#d4").attr("src");ice4=$("#e4").attr("src");icf4=$("#f4").attr("src");icg4=$("#g4").attr("src");
+ica5=$("#a5").attr("src");icb5=$("#b5").attr("src");icc5=$("#c5").attr("src");icd5=$("#d5").attr("src");ice5=$("#e5").attr("src");icf5=$("#f5").attr("src");icg5=$("#g5").attr("src");
+ica6=$("#a6").attr("src");icb6=$("#b6").attr("src");icc6=$("#c6").attr("src");icd6=$("#d6").attr("src");ice6=$("#e6").attr("src");icf6=$("#f6").attr("src");icg6=$("#g6").attr("src");
+ica7=$("#a7").attr("src");icb7=$("#b7").attr("src");icc7=$("#c7").attr("src");icd7=$("#d7").attr("src");ice7=$("#e7").attr("src");icf7=$("#f7").attr("src");icg7=$("#g7").attr("src");
+// ****   Logica series col a
+if ((ica2==ica1)&&(ica3==ica2)){kp1ca=1;if (ica4==ica3){kp1ca=0;kp2ca=1;if(ica5==ica4){kp2ca=0;kp3ca=1;if(ica6==ica5){kp3ca=0;kp4ca=1;if(ica7==ica6){kp4ca=0;kp5ca=1};};};};};
+if ((ica3==ica2)&&(ica4==ica3)){lp1ca=1;if (ica5==ica4){lp1ca=0;lp2ca=1;if(ica6==ica5){lp2ca=0;lp3ca=1;if(ica7===ica6){lp3ca=0;lp4ca=1};};};};
+if ((ica4==ica3)&&(ica5==ica4)){mp1ca=1;if (ica6==ica5){mp1ca=0;mp2ca=1;if(ica7==ica6){mp2ca=0;mp3ca=1};};};
+if ((ica5==ica4)&&(ica6==ica5)){np1ca=1;if (ica7==ica6){np1ca=0;np2ca=1};};
+if ((ica6==ica5)&&(ica7==ica6)){op1ca=1};
+if (((ica2==ica1)&&(ica3==ica2))&&((ica6==ica5)&&(ica7==ica6))){qp4ca=1};
+// ****  Logica series col b
+
+// ****  Logica series col c
+// ****  Logica series col d
+// ****  Logica series col e
+// ****  Logica series col f
+// **** Logica series col g
+// **** Logica series fila 1
+// **** Logica series fila 2
+// **** Logica series fila 3
+// **** Logica series fila 4
+// **** Logica series fila 5
+// **** Logica series fila 6
+// **** Logica series fila 7
+// **** Cambio dulces por Series
+
+
+// **** Asigancion Puntaje
+};
+
+
+
+
+// □□□□□□  Fin Modulo 4 □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
+
+// □□□□□□  5 Modulo logica de cambios x drag and drp □□□□□□
 function monitordrop(){
 if ((idarra)=="a1"){llena1()};if ((idarra)=="a2"){llena2()};if ((idarra)=="a3"){llena3()};if ((idarra)=="a4"){llena4()};if ((idarra)=="a5"){llena5()};if ((idarra)=="a6"){llena6()};if ((idarra)=="a7"){llena7()};
 if ((idarra)=="b1"){llenb1()};if ((idarra)=="b2"){llenb2()};if ((idarra)=="b3"){llenb3()};if ((idarra)=="b4"){llenb4()};if ((idarra)=="b5"){llenb5()};if ((idarra)=="b6"){llenb6()};if ((idarra)=="b7"){llenb7()};
@@ -178,7 +227,7 @@ if ((idarra)=="g1"){lleng1()};if ((idarra)=="g2"){lleng2()};if ((idarra)=="g3"){
          $("#b2").css("top","0px");
          $("#b2").css("left","0px");
          $("#b2").attr("src",imb1);
-         $("#b1").css("top","-40px");
+         $("#b1").css("top","-60px");
          $("#b1").css("left","0px");
          $("#b1").animate({top:"0px"},500);
          numx=Math.floor((Math.random() * 4) + 1);
@@ -943,14 +992,12 @@ if ((idarra)=="g1"){lleng1()};if ((idarra)=="g2"){lleng2()};if ((idarra)=="g3"){
 
 
 
-$(".bt1").click(function(){
-ima1=$("#a1").attr("scr");alert(ima1);
-})
+
 
 // □□□□□□  2  Declaración de Variables Globales □□□□□□
 var g3 ;
 var imgarra; var elecae; var recipe; var reogi; var flagdrop=0; var idarra;
-
+var p1ca ;var p2ca ;var p3ca ;var p4ca ; var p5ca ;
 var numa = [];numb = []; numc = [];numd =[];nume =[];numf=[]; numg = [];
 var cola = [a1,a2,a3,a4,a5,a6,a7] ;
 var colb = [b1,b2,b3,b4,b5,b6,b7] ;
@@ -1033,15 +1080,3 @@ if (a7==4){$("#a7").attr("src","image/4.png");} if (b7==4){$("#b7").attr("src","
 
 }
 // □□□□□□  Fin 4 □□□□□□
-
-
-// □□□□□□  5 Modulo Actividad del boton Inicar □□□□□□
-$(".btn-reinicio").click(function(){ $(".btn-reinicio").css(asigna())})
-// □□□□□□  Fin 5 □□□□□□
-
-// □□□□□□  4 Modulo Logica deteccion Series □□□□□□
-function deteceries(){
-
-
-}
-// □□□□□□  Fin M4 □□□□□□
