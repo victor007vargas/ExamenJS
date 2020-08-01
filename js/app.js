@@ -48,8 +48,7 @@ $(".bt1").click(function(){deteceries()});
 
 
 // □□□□□□  4 Modulo Logica deteccion Series + Cambio dulces + Puntos  □□□□□□
-function deteceries(){
-// **** Deteciion de Imagenes
+function deteceries(){// **** Deteciion de Imagenes
 ica1=$("#a1").attr("src");icb1=$("#b1").attr("src");icc1=$("#c1").attr("src");icd1=$("#d1").attr("src");ice1=$("#e1").attr("src");icf1=$("#f1").attr("src");icg1=$("#g1").attr("src");
 ica3=$("#a3").attr("src");icb3=$("#b3").attr("src");icc3=$("#c3").attr("src");icd2=$("#d2").attr("src");ice2=$("#e2").attr("src");icf2=$("#f2").attr("src");icg2=$("#g2").attr("src");
 ica2=$("#a2").attr("src");icb2=$("#b2").attr("src");icc2=$("#c2").attr("src");icd3=$("#d3").attr("src");ice3=$("#e3").attr("src");icf3=$("#f3").attr("src");icg3=$("#g3").attr("src");
@@ -85,14 +84,110 @@ if (kp5ca==1){gena1();
   ni();$("#a6").attr("src",imgx);
   ni();$("#a7").attr("src",imgx);kp5ca=0;};
 
-if (lp1ca==1){alert("en ejecucion");lp1ca=0;};
+if (lp1ca==1){
+ima1=$("#a1").attr("src");
+$("#a5").attr("src",ima1);
+gena1();
+ni();$("#a2").attr("src",imgx);
+ni();$("#a3").attr("src",imgx);lp1ca=0;};
 
-};
+if (lp2ca==1){
+ima1=$("#a1").attr("src");
+$("#a6").attr("src",ima1);
+gena1();
+ni();$("#a2").attr("src",imgx);
+ni();$("#a3").attr("src",imgx);
+ni();$("#a4").attr("src",imgx);lp2ca=0;};
+
+if (lp3ca==1){
+ima1=$("#a1").attr("src");
+$("#a7").attr("src",ima1);
+gena1();
+ni();$("#a2").attr("src",imgx);
+ni();$("#a3").attr("src",imgx);
+ni();$("#a4").attr("src",imgx);
+ni();$("#a5").attr("src",imgx);lp3ca=0;};
+
+if (lp4ca==1){
+gena1();
+ni();$("#a2").attr("src",imgx);
+ni();$("#a3").attr("src",imgx);
+ni();$("#a4").attr("src",imgx);
+ni();$("#a5").attr("src",imgx);lp4ca=0;};
+
+if(mp1ca==1){
+  gena1();
+  ima1=$("#a1").attr("src");
+  ima2=$("#a2").attr("src");
+  $("#a6").attr("src",ima1);
+  $("#a7").attr("src",ima2);
+  ni();$("#a3").attr("src",imgx);
+  ni();$("#a4").attr("src",imgx);
+  ni();$("#a5").attr("src",imgx);mp1ca=0;};
+
+if(mp2ca==1){
+  gena1();
+  ima1=$("#a1").attr("src");
+  ima2=$("#a2").attr("src");
+  $("#a2").attr("src",ima1);
+  $("#a7").attr("src",ima2);
+  ni();$("#a3").attr("src",imgx);
+  ni();$("#a4").attr("src",imgx);
+  ni();$("#a5").attr("src",imgx);
+  ni();$("#a6").attr("src",imgx);mp2ca=0;};
+
+  if(mp3ca==1){
+    ima1=$("#a1").attr("src");
+    $("#a2").attr("src",ima1);
+    gena1();
+    ni();$("#a3").attr("src",imgx);
+    ni();$("#a4").attr("src",imgx);
+    ni();$("#a5").attr("src",imgx);
+    ni();$("#a6").attr("src",imgx);
+    ni();$("#a6").attr("src",imgx);mp3ca=0;};
+
+    if(np1ca==1){
+    gena1();
+    ni();$("#a4").attr("src",imgx);
+    ni();$("#a5").attr("src",imgx);
+    ni();$("#a6").attr("src",imgx);np1ca=0;
+    };
+
+    if(np2ca==1){
+    ima1=$("#a1").attr("src");
+    $("#a2").attr("src",ima1);
+    gena1();
+    ni();$("#a4").attr("src",imgx);
+    ni();$("#a5").attr("src",imgx);
+    ni();$("#a6").attr("src",imgx);
+    ni();$("#a6").attr("src",imgx);np2ca=0;
+    };
+
+    if (op1ca){
+     ima1=$("#a1").attr("src");
+     $("#a2").attr("src",ima1);
+     gena1();
+     ni();$("#a5").attr("src",imgx);
+     ni();$("#a6").attr("src",imgx);
+     ni();$("#a7").attr("src",imgx);op1ca=0;
+    };
+
+    if(qp1ca){
+      gena1();
+      ni();$("#a2").attr("src",imgx);
+      ni();$("#a3").attr("src",imgx);
+      ni();$("#a5").attr("src",imgx);
+      ni();$("#a6").attr("src",imgx);
+      ni();$("#a7").attr("src",imgx);
+      qp1ca=0;
+
+    };
+
+
+};// □□□□□□  Fin Modulo 4 □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
 
 
 
-
-// □□□□□□  Fin Modulo 4 □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
 
 // □□□□□□  5 Modulo logica de cambios x drag and drp □□□□□□
 function monitordrop(){
@@ -946,6 +1041,8 @@ if ((idarra)=="g1"){lleng1()};if ((idarra)=="g2"){lleng2()};if ((idarra)=="g3"){
 var g3 ;
 var imgarra; var elecae; var recipe; var reogi; var flagdrop=0; var imebas="image/1.png";var idarra;
 var kp1ca; var kp2ca; var kp3ca; var kp4ca; var kp5ca;
+var lp1ca; var lp2ca; var lp3ca; var lp4ca; var mp1ca; var mp2ca; var mp3ca;
+var np1ca; var np2ca; var op1ca ; var qp1ca;
 var numa = [];numb = []; numc = [];numd =[];nume =[];numf=[]; numg = [];
 var cola = [a1,a2,a3,a4,a5,a6,a7] ;
 var colb = [b1,b2,b3,b4,b5,b6,b7] ;
@@ -1035,6 +1132,5 @@ function gena1(){
   $("#a1").css("left","0px");
   $("#a1").animate({top:"0px"},500);
   ni();$("#a1").attr("src",imgx);
-  ni();$("#a2").attr("src",imgx);
-  ni();$("#a3").attr("src",imgx);
+
   }
