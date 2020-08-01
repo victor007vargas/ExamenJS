@@ -108,7 +108,7 @@ div[class^='col']{
 footer {
 display: flex;
 flex-direction:  row;
-margin-left: 1550px;
+margin-left: 150px;
 }
 
 .reglas{
