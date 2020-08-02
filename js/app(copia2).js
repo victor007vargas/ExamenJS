@@ -39,7 +39,8 @@ $(".bt2").click(function(){
   ica5=$("#a5").attr("src");icb5=$("#b5").attr("src");icc5=$("#c5").attr("src");icd5=$("#d5").attr("src");ice5=$("#e5").attr("src");icf5=$("#f5").attr("src");icg5=$("#g5").attr("src");
   ica6=$("#a6").attr("src");icb6=$("#b6").attr("src");icc6=$("#c6").attr("src");icd6=$("#d6").attr("src");ice6=$("#e6").attr("src");icf6=$("#f6").attr("src");icg6=$("#g6").attr("src");
   ica7=$("#a7").attr("src");icb7=$("#b7").attr("src");icc7=$("#c7").attr("src");icd7=$("#d7").attr("src");ice7=$("#e7").attr("src");icf7=$("#f7").attr("src");icg7=$("#g7").attr("src");
-  alert(ica1+"\n"+ica2+"\n"+ica3+"\n"+ica4+"\n"+ica5+"\n"+ica6+"\n"+ica7)});
+ if ((ica2==ica1)&&(ica3==ica2)){alert("se dio la igualdad")};
+  });
 
 $(".bt1").click(function(){deteceries()});
 
@@ -47,8 +48,7 @@ $(".bt1").click(function(){deteceries()});
 
 
 // □□□□□□  4 Modulo Logica deteccion Series + Cambio dulces + Puntos  □□□□□□
-function deteceries(){
-// **** Deteciion de Imagenes
+function deteceries(){// **** Deteciion de Imagenes
 ica1=$("#a1").attr("src");icb1=$("#b1").attr("src");icc1=$("#c1").attr("src");icd1=$("#d1").attr("src");ice1=$("#e1").attr("src");icf1=$("#f1").attr("src");icg1=$("#g1").attr("src");
 ica3=$("#a3").attr("src");icb3=$("#b3").attr("src");icc3=$("#c3").attr("src");icd2=$("#d2").attr("src");ice2=$("#e2").attr("src");icf2=$("#f2").attr("src");icg2=$("#g2").attr("src");
 ica2=$("#a2").attr("src");icb2=$("#b2").attr("src");icc2=$("#c2").attr("src");icd3=$("#d3").attr("src");ice3=$("#e3").attr("src");icf3=$("#f3").attr("src");icg3=$("#g3").attr("src");
@@ -56,8 +56,6 @@ ica4=$("#a4").attr("src");icb4=$("#b4").attr("src");icc4=$("#c4").attr("src");ic
 ica5=$("#a5").attr("src");icb5=$("#b5").attr("src");icc5=$("#c5").attr("src");icd5=$("#d5").attr("src");ice5=$("#e5").attr("src");icf5=$("#f5").attr("src");icg5=$("#g5").attr("src");
 ica6=$("#a6").attr("src");icb6=$("#b6").attr("src");icc6=$("#c6").attr("src");icd6=$("#d6").attr("src");ice6=$("#e6").attr("src");icf6=$("#f6").attr("src");icg6=$("#g6").attr("src");
 ica7=$("#a7").attr("src");icb7=$("#b7").attr("src");icc7=$("#c7").attr("src");icd7=$("#d7").attr("src");ice7=$("#e7").attr("src");icf7=$("#f7").attr("src");icg7=$("#g7").attr("src");
-
-
 // ****   Logica series col a
 
 if ((ica2==ica1)&&(ica3==ica2)){kp1ca=1;if (ica4==ica3){kp1ca=0;kp2ca=1;if(ica5==ica4){kp2ca=0;kp3ca=1;if(ica6==ica5){kp3ca=0;kp4ca=1;if(ica7==ica6){kp4ca=0;kp5ca=1};};};};};
@@ -67,6 +65,7 @@ if ((ica5==ica4)&&(ica6==ica5)){np1ca=1;if (ica7==ica6){np1ca=0;np2ca=1};};
 if ((ica6==ica5)&&(ica7==ica6)){op1ca=1};
 
 if (kp1ca==1){gena1();kp1ca=0;};
+
 if (kp2ca==1){gena1();
    ni();$("#a4").attr("src",imgx);kp2ca=0;};
 
@@ -85,38 +84,110 @@ if (kp5ca==1){gena1();
   ni();$("#a6").attr("src",imgx);
   ni();$("#a7").attr("src",imgx);kp5ca=0;};
 
-function gena1(){
-  $("#a1").css("top","-40px");
-  $("#a1").css("left","0px");
-  $("#a1").animate({top:"0px"},500);
-  ni();$("#a1").attr("src",imgx);
-  ni();$("#a2").attr("src",imgx);
+if (lp1ca==1){
+ima1=$("#a1").attr("src");
+$("#a5").attr("src",ima1);
+gena1();
+ni();$("#a2").attr("src",imgx);
+ni();$("#a3").attr("src",imgx);lp1ca=0;};
+
+if (lp2ca==1){
+ima1=$("#a1").attr("src");
+$("#a6").attr("src",ima1);
+gena1();
+ni();$("#a2").attr("src",imgx);
+ni();$("#a3").attr("src",imgx);
+ni();$("#a4").attr("src",imgx);lp2ca=0;};
+
+if (lp3ca==1){
+ima1=$("#a1").attr("src");
+$("#a7").attr("src",ima1);
+gena1();
+ni();$("#a2").attr("src",imgx);
+ni();$("#a3").attr("src",imgx);
+ni();$("#a4").attr("src",imgx);
+ni();$("#a5").attr("src",imgx);lp3ca=0;};
+
+if (lp4ca==1){
+gena1();
+ni();$("#a2").attr("src",imgx);
+ni();$("#a3").attr("src",imgx);
+ni();$("#a4").attr("src",imgx);
+ni();$("#a5").attr("src",imgx);lp4ca=0;};
+
+if(mp1ca==1){
+  gena1();
+  ima1=$("#a1").attr("src");
+  ima2=$("#a2").attr("src");
+  $("#a6").attr("src",ima1);
+  $("#a7").attr("src",ima2);
   ni();$("#a3").attr("src",imgx);
-  }
-// ****  Logica series col b
+  ni();$("#a4").attr("src",imgx);
+  ni();$("#a5").attr("src",imgx);mp1ca=0;};
 
-// ****  Logica series col c
-// ****  Logica series col d
-// ****  Logica series col e
-// ****  Logica series col f
-// **** Logica series col g
-// **** Logica series fila 1
-// **** Logica series fila 2
-// **** Logica series fila 3
-// **** Logica series fila 4
-// **** Logica series fila 5
-// **** Logica series fila 6
-// **** Logica series fila 7
-// **** Cambio dulces por Series
+if(mp2ca==1){
+  gena1();
+  ima1=$("#a1").attr("src");
+  ima2=$("#a2").attr("src");
+  $("#a2").attr("src",ima1);
+  $("#a7").attr("src",ima2);
+  ni();$("#a3").attr("src",imgx);
+  ni();$("#a4").attr("src",imgx);
+  ni();$("#a5").attr("src",imgx);
+  ni();$("#a6").attr("src",imgx);mp2ca=0;};
+
+  if(mp3ca==1){
+    ima1=$("#a1").attr("src");
+    $("#a2").attr("src",ima1);
+    gena1();
+    ni();$("#a3").attr("src",imgx);
+    ni();$("#a4").attr("src",imgx);
+    ni();$("#a5").attr("src",imgx);
+    ni();$("#a6").attr("src",imgx);
+    ni();$("#a6").attr("src",imgx);mp3ca=0;};
+
+    if(np1ca==1){
+    gena1();
+    ni();$("#a4").attr("src",imgx);
+    ni();$("#a5").attr("src",imgx);
+    ni();$("#a6").attr("src",imgx);np1ca=0;
+    };
+
+    if(np2ca==1){
+    ima1=$("#a1").attr("src");
+    $("#a2").attr("src",ima1);
+    gena1();
+    ni();$("#a4").attr("src",imgx);
+    ni();$("#a5").attr("src",imgx);
+    ni();$("#a6").attr("src",imgx);
+    ni();$("#a6").attr("src",imgx);np2ca=0;
+    };
+
+    if (op1ca){
+     ima1=$("#a1").attr("src");
+     $("#a2").attr("src",ima1);
+     gena1();
+     ni();$("#a5").attr("src",imgx);
+     ni();$("#a6").attr("src",imgx);
+     ni();$("#a7").attr("src",imgx);op1ca=0;
+    };
+
+    if(qp1ca){
+      gena1();
+      ni();$("#a2").attr("src",imgx);
+      ni();$("#a3").attr("src",imgx);
+      ni();$("#a5").attr("src",imgx);
+      ni();$("#a6").attr("src",imgx);
+      ni();$("#a7").attr("src",imgx);
+      qp1ca=0;
+
+    };
 
 
-// **** Asigancion Puntaje
-};
+};// □□□□□□  Fin Modulo 4 □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
 
 
 
-
-// □□□□□□  Fin Modulo 4 □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□
 
 // □□□□□□  5 Modulo logica de cambios x drag and drp □□□□□□
 function monitordrop(){
@@ -969,8 +1040,9 @@ if ((idarra)=="g1"){lleng1()};if ((idarra)=="g2"){lleng2()};if ((idarra)=="g3"){
 // □□□□□□  2  Declaración de Variables Globales □□□□□□
 var g3 ;
 var imgarra; var elecae; var recipe; var reogi; var flagdrop=0; var imebas="image/1.png";var idarra;
-var p1ca ;var p2ca ;var p3ca ;var p4ca ; var p5ca ;
-
+var kp1ca; var kp2ca; var kp3ca; var kp4ca; var kp5ca;
+var lp1ca; var lp2ca; var lp3ca; var lp4ca; var mp1ca; var mp2ca; var mp3ca;
+var np1ca; var np2ca; var op1ca ; var qp1ca;
 var numa = [];numb = []; numc = [];numd =[];nume =[];numf=[]; numg = [];
 var cola = [a1,a2,a3,a4,a5,a6,a7] ;
 var colb = [b1,b2,b3,b4,b5,b6,b7] ;
@@ -1055,3 +1127,10 @@ if (a7==4){$("#a7").attr("src","image/4.png");} if (b7==4){$("#b7").attr("src","
 // □□□□□□  Funciones Generales □□□□□□
 function nx (){numx=Math.floor((Math.random() * 4) + 1)}; // Genracion de Numero aleatorio de 1 A 4♪
 function ni (){nx();imgx=[imebas.slice(0,6),numx,imebas.slice(7,11)] .join("")}
+function gena1(){
+  $("#a1").css("top","-40px");
+  $("#a1").css("left","0px");
+  $("#a1").animate({top:"0px"},500);
+  ni();$("#a1").attr("src",imgx);
+
+  }
