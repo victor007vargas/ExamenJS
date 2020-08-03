@@ -22,12 +22,12 @@ flagdrop=1; if (flagdrop==1){deteceries();flagdrop=0;};mov=mov+1;$("#movimientos
 }//****fin reasigel
 
 // □□□□□□  5 Modulo Actividad del boton Inicar □□□□□□
-$(".btn-reinicio").click(function(){ $(".btn-reinicio").css(init(),asiale())})
+$(".btn-reinicio").click(function(){ $(".btn-reinicio").css(init(),asiale(),cronometro())})
 // □□□□□□  Fin 5 □□□□□□
 
 // ⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂ Botones de Prueba
 $(".bt2").click(function(){
-alert(flagdrop);
+  stopper();alert("se envio stopper");
   });
 
 $(".bt1").click(function(){deteceries()});
@@ -164,8 +164,7 @@ if(mp2ca==1){
       ni();$("#a3").attr("src",imgx);
       ni();$("#a5").attr("src",imgx);
       ni();$("#a6").attr("src",imgx);
-      ni();$("#a7").attr("src",imgx);
-      qp1ca=0;};
+      ni();$("#a7").attr("src",imgx);qp1ca=0;};
 
 
 
@@ -1024,8 +1023,8 @@ if ((idarra)=="g1"){lleng1()};if ((idarra)=="g2"){lleng2()};if ((idarra)=="g3"){
 
 
 // □□□□□□  2  Declaración de Variables Globales □□□□□□
-var pts=0; var mov=0 ;var flagdrop=0; var flagini=0;
-var imgarra; var elecae; var recipe; var reogi;  var imebas="image/1.png";var idarra; var g3 ;
+var pts=0; var mov=0 ;var flagdrop=0; var flagini=0; var stop=0; var mycounter;
+var imgarra; var elecae; var recipe; var reogi;  var imebas="image/1.png";var idarra; var g3 ; var s=0; var m=0;
 var kp1ca; var kp2ca; var kp3ca; var kp4ca; var kp5ca;
 var lp1ca; var lp2ca; var lp3ca; var lp4ca; var mp1ca; var mp2ca; var mp3ca;
 var np1ca; var np2ca; var op1ca ; var qp1ca;
@@ -1123,3 +1122,35 @@ function gena1(){
   function pt40(){pts=pts+20;$("#score-text").text(pts);};
   function pt70(){pts=pts+30;$("#score-text").text(pts);};
   function pt100(){pts=pts+30;$("#score-text").text(pts);};
+
+  function cronometro(){ s=60; m=1;
+  mycounter=setInterval(counter,100)
+  };
+
+  function counter(){s=s-1;if(s==0){m=0;s=59};
+  $("#timer").text("0"+m+":"+s);
+  if((s==1)&&(m==0)){stop=1;clearInterval(mycounter);$("#timer").text("Ohh tiempo agotado!");};}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//                            THE END
+//*******************************************************************

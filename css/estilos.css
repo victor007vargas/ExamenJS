@@ -34,6 +34,7 @@ body{
   height: 700px;
   display: flex;
   flex-flow: row wrap;
+
 }
 
 .panel-score{
@@ -115,7 +116,7 @@ margin-left: 150px;
 
  display: flex;
  background-size: cover;
- background-image: url('../image/trofeo.png');
+ background-image: url('../image/explo.png');
  width: 80px;
  height: 100px;
  margin-top: 25px;
