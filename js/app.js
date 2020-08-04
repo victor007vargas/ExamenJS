@@ -26,11 +26,11 @@ $(".btn-reinicio").click(function(){ $(".btn-reinicio").css(init(),asiale(),cron
 // □□□□□□  Fin 5 □□□□□□
 
 // ⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂ Botones de Prueba
-$(".bt2").click(function(){});
+$(".bt2").click(function(){$( document ).ready(function() {
+    alertconsole.log( "ready!" );
+});});
 
-$(".bt1").click(function(){
-if(parada=="si"){alert("Se paro el juego "+parada)};
-});
+$(".bt1").click(function(){reaccend()});
 
 //⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂Fin de Botoner de prueba
 
@@ -1127,13 +1127,15 @@ function gena1(){
   function pt100(){pts=pts+30;$("#score-text").text(pts);};
 
   function cronometro(){ s=60; m=1;
-  mycounter=setInterval(counter,50)
+  if (parada=="no"){mycounter=setInterval(counter,50);};
+  if (parada=="si"){reaccend();};
   };
+
 
   function counter(){s=s-1;if(s==0){m=0;s=59};
   $("#timer").text("0"+m+":"+s);
-  if((s==1)&&(m==0)){parada="si";clearInterval(mycounter);$("#timer").text("Ohh tiempo agotado!");}
-  if(parada=="si"){accend();parada="no"};
+  if((s==1)&&(m==0)){parada="si";clearInterval(mycounter);$("#timer").text(" Ohh tiempo agotado!");}
+  if(parada=="si"){setTimeout(accend,2000);};
   }
 
 
@@ -1170,11 +1172,16 @@ $(".panel-score").animate({width: "+=1000"}, 3000, );
 $(".data-info").css("color","green");
 $(".data-titulo").css("color","white");
 $(".data-info").css("font-size","3.2em");
+$("#timer").text("Intentalo nuevamente!");
 $(".btn-reinicio").text("Re-Iniciar");
+parada="si"
 };
 
 
 
+function reaccend (){
+  location.reload()
+};
 
 
 
