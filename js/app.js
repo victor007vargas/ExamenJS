@@ -53,10 +53,10 @@ if ((ica4==ica3)&&(ica5==ica4)){mp1ca=1;if (ica6==ica5){mp1ca=0;mp2ca=1;if(ica7=
 if ((ica5==ica4)&&(ica6==ica5)){np1ca=1;if (ica7==ica6){np1ca=0;np2ca=1};};
 if ((ica6==ica5)&&(ica7==ica6)){op1ca=1};
 
-if (kp1ca==1){ani10();gena1();
+if (kp1ca==1){ani10();setTimeout(acckp1ca,800);function acckp1ca(){gena1();
   ni();$("#a2").attr("src",imgx);kp2ca=0;pt20();
   ni();$("#a3").attr("src",imgx);kp2ca=0;pt20();
-  kp1ca=0;pt10();};
+  kp1ca=0;pt10()};};
 
 if (kp2ca==1){ani20();gena1();
    ni();$("#a4").attr("src",imgx);kp2ca=0;pt20();};
@@ -1127,7 +1127,7 @@ function gena1(){
   function pt100(){pts=pts+30;$("#score-text").text(pts);};
 
   function cronometro(){ s=60; m=1;
-  if (parada=="no"){mycounter=setInterval(counter,50);};
+  if (parada=="no"){mycounter=setInterval(counter,1000);};
   if (parada=="si"){reaccend();};
   };
 
@@ -1176,7 +1176,6 @@ $("#timer").text("Intentalo nuevamente!");
 $(".btn-reinicio").text("Re-Iniciar");
 parada="si"
 };
-
 
 
 function reaccend (){
