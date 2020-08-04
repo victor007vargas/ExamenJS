@@ -26,11 +26,11 @@ $(".btn-reinicio").click(function(){ $(".btn-reinicio").css(init(),asiale(),cron
 // □□□□□□  Fin 5 □□□□□□
 
 // ⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂ Botones de Prueba
-$(".bt2").click(function(){
-  accend();
-  });
+$(".bt2").click(function(){});
 
-$(".bt1").click(function(){deteceries()});
+$(".bt1").click(function(){
+if(parada=="si"){alert("Se paro el juego "+parada)};
+});
 
 //⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂Fin de Botoner de prueba
 
@@ -1026,7 +1026,7 @@ if ((idarra)=="g1"){lleng1()};if ((idarra)=="g2"){lleng2()};if ((idarra)=="g3"){
 
 
 // □□□□□□  2  Declaración de Variables Globales □□□□□□
-var pts=0; var mov=0 ;var flagdrop=0; var flagini=0; var stop=0; var mycounter;
+var pts=0; var mov=0 ;var flagdrop=0; var flagini=0; var parada="no"; var mycounter;
 var imgarra; var elecae; var recipe; var reogi;  var imebas="image/1.png";var idarra; var g3 ; var s=0; var m=0;
 var kp1ca; var kp2ca; var kp3ca; var kp4ca; var kp5ca;
 var lp1ca; var lp2ca; var lp3ca; var lp4ca; var mp1ca; var mp2ca; var mp3ca;
@@ -1127,12 +1127,18 @@ function gena1(){
   function pt100(){pts=pts+30;$("#score-text").text(pts);};
 
   function cronometro(){ s=60; m=1;
-  mycounter=setInterval(counter,100)
+  mycounter=setInterval(counter,50)
   };
 
   function counter(){s=s-1;if(s==0){m=0;s=59};
   $("#timer").text("0"+m+":"+s);
-  if((s==1)&&(m==0)){stop=1;clearInterval(mycounter);$("#timer").text("Ohh tiempo agotado!");};}
+  if((s==1)&&(m==0)){parada="si";clearInterval(mycounter);$("#timer").text("Ohh tiempo agotado!");}
+  if(parada=="si"){accend();parada="no"};
+  }
+
+
+
+
 
  function ani10(){
 
@@ -1166,15 +1172,6 @@ $(".data-titulo").css("color","white");
 $(".data-info").css("font-size","3.2em");
 $(".btn-reinicio").text("Re-Iniciar");
 };
-
-
-
-
-
-
-
-
-
 
 
 

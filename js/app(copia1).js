@@ -27,7 +27,7 @@ $(".btn-reinicio").click(function(){ $(".btn-reinicio").css(init(),asiale(),cron
 
 // ⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂ Botones de Prueba
 $(".bt2").click(function(){
-  stopper();alert("se envio stopper");
+  accend();
   });
 
 $(".bt1").click(function(){deteceries()});
@@ -53,9 +53,12 @@ if ((ica4==ica3)&&(ica5==ica4)){mp1ca=1;if (ica6==ica5){mp1ca=0;mp2ca=1;if(ica7=
 if ((ica5==ica4)&&(ica6==ica5)){np1ca=1;if (ica7==ica6){np1ca=0;np2ca=1};};
 if ((ica6==ica5)&&(ica7==ica6)){op1ca=1};
 
-if (kp1ca==1){gena1();kp1ca=0;pt10();};
+if (kp1ca==1){ani10();gena1();
+  ni();$("#a2").attr("src",imgx);kp2ca=0;pt20();
+  ni();$("#a3").attr("src",imgx);kp2ca=0;pt20();
+  kp1ca=0;pt10();};
 
-if (kp2ca==1){gena1();
+if (kp2ca==1){ani20();gena1();
    ni();$("#a4").attr("src",imgx);kp2ca=0;pt20();};
 
 if (kp3ca==1){gena1();
@@ -1129,15 +1132,46 @@ function gena1(){
 
   function counter(){s=s-1;if(s==0){m=0;s=59};
   $("#timer").text("0"+m+":"+s);
-  if((s==1)&&(m==0)){stop=1;clearInterval(mycounter);$("#timer").text("Ohh tiempo agotado!");};}
+  if((s==1)&&(m==0)){stop=1;clearInterval(mycounter);$("#timer").text("Ohh tiempo agotado!");};
+  }
+
+
+     function ani10(){
+
+    $("#a2").animate({width:"100px",height:"100px"},200)
+    $("#a2").animate({width:"90px",height:"90px"},200)
+    $("#a2").effect("bounce");
+    $("#a3").animate({width:"100px",height:"100px"},200)
+    $("#a3").animate({width:"90px",height:"90px"},200)
+    $("#a3").effect("bounce"); }
+
+      function ani20(){
+
+         $("#a2").animate({width:"100px",height:"100px"},200)
+         $("#a2").animate({width:"90px",height:"90px"},200)
+         $("#a2").effect("bounce");
+         $("#a3").animate({width:"100px",height:"100px"},200)
+         $("#a3").animate({width:"90px",height:"90px"},200)
+         $("#a3").effect("bounce");
+         $("#a4").animate({width:"100px",height:"100px"},200)
+         $("#a4").animate({width:"90px",height:"90px"},200)
+         $("#a4").effect("bounce");
+           }
+
+
+function accend(){
+$(".elemento").hide();
+$(".panel-tablero").animate({opacity:0.1,width: "-=1450"}, 500, );
+$(".panel-score").animate({width: "+=1000"}, 3000, );
+$(".data-info").css("color","green");
+$(".data-titulo").css("color","white");
+$(".data-info").css("font-size","3.2em");
+$(".btn-reinicio").text("Re-Iniciar");
+};
 
 
 
-
-
-
-
-
+ if (1==1){alert("Hola")} ;
 
 
 
