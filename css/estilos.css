@@ -17,6 +17,8 @@ body{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  display: flex;
+  flex-direction:  row;
 }
 
 .main-titulo{
@@ -34,6 +36,7 @@ body{
   height: 700px;
   display: flex;
   flex-flow: row wrap;
+  align-items:center;
 
 }
 
