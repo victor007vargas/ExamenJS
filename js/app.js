@@ -22,13 +22,11 @@ flagdrop=1; if (flagdrop==1){deteceries();flagdrop=0;};mov=mov+1;$("#movimientos
 }//****fin reasigel
 
 // □□□□□□  5 Modulo Actividad del boton Inicar □□□□□□
-$(".btn-reinicio").click(function(){ $(".btn-reinicio").css(init(),asiale(),cronometro())})
+$(".btn-reinicio").click(function(){init();asiale();cronometro();ct="uno"})
 // □□□□□□  Fin 5 □□□□□□
 
 // ⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂ Botones de Prueba
-$(".bt2").click(function(){$( document ).ready(function() {
-    alertconsole.log( "ready!" );
-});});
+$(".bt2").click(function(){          });
 
 $(".bt1").click(function(){reaccend()});
 
@@ -1026,7 +1024,7 @@ if ((idarra)=="g1"){lleng1()};if ((idarra)=="g2"){lleng2()};if ((idarra)=="g3"){
 
 
 // □□□□□□  2  Declaración de Variables Globales □□□□□□
-var pts=0; var mov=0 ;var flagdrop=0; var flagini=0; var parada="no"; var mycounter;
+var pts=0; var mov=0 ;var flagdrop=0; var flagini=0; var parada="no"; var mycounter; var ct="ini";
 var imgarra; var elecae; var recipe; var reogi;  var imebas="image/1.png";var idarra; var g3 ; var s=0; var m=0;
 var kp1ca; var kp2ca; var kp3ca; var kp4ca; var kp5ca;
 var lp1ca; var lp2ca; var lp3ca; var lp4ca; var mp1ca; var mp2ca; var mp3ca;
@@ -1127,7 +1125,8 @@ function gena1(){
   function pt100(){pts=pts+30;$("#score-text").text(pts);};
 
   function cronometro(){ s=60; m=1;
-  if (parada=="no"){mycounter=setInterval(counter,1000);};
+  if ((parada=="no")&&(ct=="ini")){mycounter=setInterval(counter,50);};
+  if (ct=="uno"){reaccend();ct="ini"};
   if (parada=="si"){reaccend();};
   };
 

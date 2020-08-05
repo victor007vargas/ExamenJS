@@ -22,15 +22,13 @@ flagdrop=1; if (flagdrop==1){deteceries();flagdrop=0;};mov=mov+1;$("#movimientos
 }//****fin reasigel
 
 // □□□□□□  5 Modulo Actividad del boton Inicar □□□□□□
-$(".btn-reinicio").click(function(){ $(".btn-reinicio").css(init(),asiale(),cronometro())})
+$(".btn-reinicio").click(function(){init();asiale();cronometro();ct="uno"})
 // □□□□□□  Fin 5 □□□□□□
 
 // ⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂ Botones de Prueba
-$(".bt2").click(function(){
-  accend();
-  });
+$(".bt2").click(function(){          });
 
-$(".bt1").click(function(){deteceries()});
+$(".bt1").click(function(){reaccend()});
 
 //⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂⌂Fin de Botoner de prueba
 
@@ -53,10 +51,10 @@ if ((ica4==ica3)&&(ica5==ica4)){mp1ca=1;if (ica6==ica5){mp1ca=0;mp2ca=1;if(ica7=
 if ((ica5==ica4)&&(ica6==ica5)){np1ca=1;if (ica7==ica6){np1ca=0;np2ca=1};};
 if ((ica6==ica5)&&(ica7==ica6)){op1ca=1};
 
-if (kp1ca==1){ani10();gena1();
+if (kp1ca==1){ani10();setTimeout(acckp1ca,800);function acckp1ca(){gena1();
   ni();$("#a2").attr("src",imgx);kp2ca=0;pt20();
   ni();$("#a3").attr("src",imgx);kp2ca=0;pt20();
-  kp1ca=0;pt10();};
+  kp1ca=0;pt10()};};
 
 if (kp2ca==1){ani20();gena1();
    ni();$("#a4").attr("src",imgx);kp2ca=0;pt20();};
@@ -1026,7 +1024,7 @@ if ((idarra)=="g1"){lleng1()};if ((idarra)=="g2"){lleng2()};if ((idarra)=="g3"){
 
 
 // □□□□□□  2  Declaración de Variables Globales □□□□□□
-var pts=0; var mov=0 ;var flagdrop=0; var flagini=0; var stop=0; var mycounter;
+var pts=0; var mov=0 ;var flagdrop=0; var flagini=0; var parada="no"; var mycounter; var ct="ini";
 var imgarra; var elecae; var recipe; var reogi;  var imebas="image/1.png";var idarra; var g3 ; var s=0; var m=0;
 var kp1ca; var kp2ca; var kp3ca; var kp4ca; var kp5ca;
 var lp1ca; var lp2ca; var lp3ca; var lp4ca; var mp1ca; var mp2ca; var mp3ca;
@@ -1127,16 +1125,23 @@ function gena1(){
   function pt100(){pts=pts+30;$("#score-text").text(pts);};
 
   function cronometro(){ s=60; m=1;
-  mycounter=setInterval(counter,100)
+  if ((parada=="no")&&(ct=="ini")){mycounter=setInterval(counter,50);};
+  if (ct=="uno"){reaccend();ct="ini"};
+  if (parada=="si"){reaccend();};
   };
+
 
   function counter(){s=s-1;if(s==0){m=0;s=59};
   $("#timer").text("0"+m+":"+s);
-  if((s==1)&&(m==0)){stop=1;clearInterval(mycounter);$("#timer").text("Ohh tiempo agotado!");};
+  if((s==1)&&(m==0)){parada="si";clearInterval(mycounter);$("#timer").text(" Ohh tiempo agotado!");}
+  if(parada=="si"){setTimeout(accend,2000);};
   }
 
 
-     function ani10(){
+
+
+
+ function ani10(){
 
     $("#a2").animate({width:"100px",height:"100px"},200)
     $("#a2").animate({width:"90px",height:"90px"},200)
@@ -1166,20 +1171,15 @@ $(".panel-score").animate({width: "+=1000"}, 3000, );
 $(".data-info").css("color","green");
 $(".data-titulo").css("color","white");
 $(".data-info").css("font-size","3.2em");
+$("#timer").text("Intentalo nuevamente!");
 $(".btn-reinicio").text("Re-Iniciar");
+parada="si"
 };
 
 
-
- if (1==1){alert("Hola")} ;
-
-
-
-
-
-
-
-
+function reaccend (){
+  location.reload()
+};
 
 
 
